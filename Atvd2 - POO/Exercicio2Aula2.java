@@ -1,9 +1,6 @@
 import java.util.Scanner;
 
 public class Exercicio2Aula2 {
-    static void exibirCalculo(float resultado) {
-        System.out.printf("O resultado é: %.2f", resultado);
-    }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -47,3 +44,4 @@ public class Exercicio2Aula2 {
         }
     }
 }
+
