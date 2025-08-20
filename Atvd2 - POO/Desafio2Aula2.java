@@ -23,3 +23,4 @@ public class Desafio2Aula2 {
         }
     }
 }
+// Professor, eu pedi para o usuário inserir a vogal, pois não existem palavras normais sem vogais.
