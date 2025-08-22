@@ -1,7 +1,7 @@
 import java.text.Normalizer;
 import java.util.Scanner;
 
-public class Palindromo {
+public class Desafio4Aula2 {
 
     // Método para remover acentos
     public static String removerAcentos(String input) {
