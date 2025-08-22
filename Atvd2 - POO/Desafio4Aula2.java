@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class Desafio4Aula2 {
 
-    // Método para remover acentos
     public static String removerAcentos(String input) {
         if (input == null) return null;
         return Normalizer.normalize(input, Normalizer.Form.NFD)
@@ -16,16 +15,12 @@ public class Desafio4Aula2 {
         String str = sc.nextLine();
         sc.close();
 
-        // 1ª etapa: transformar em minúsculo
         str = str.toLowerCase();
 
-        // 2ª etapa: remover caracteres especiais e espaços
         str = str.replaceAll("[^a-zA-Z0-9]", "");
 
-        // 3ª etapa: remover acentos
         str = removerAcentos(str);
 
-        // 4ª etapa: verificar se é palíndromo
         boolean ehPalindromo = true;
         for (int i = 0, j = str.length() - 1; i < j; i++, j--) {
             if (str.charAt(i) != str.charAt(j)) {
@@ -34,7 +29,6 @@ public class Desafio4Aula2 {
             }
         }
 
-        // Resultado
         if (ehPalindromo) {
             System.out.println("É palíndromo!");
         } else {
