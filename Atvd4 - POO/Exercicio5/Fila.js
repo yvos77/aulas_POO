@@ -84,4 +84,4 @@ console.log("Topo da fila:", fila.topo());
 console.log("Desenfileirando:", fila.desenfileira());
 console.log("Topo agora:", fila.topo());
 fila.listar();
-console.log("Tamanho da fila:", fila.tamanho());
+console.log("Tamanho da fila:", fila.tamanho()); 
