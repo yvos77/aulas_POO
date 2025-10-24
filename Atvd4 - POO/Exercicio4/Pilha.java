@@ -17,13 +17,11 @@ class Pilha<T> {
         this.tamanho = 0;
     }
 
-    // Retorna o valor do topo sem remover
     public T topo() {
         if (topo == null) return null;
         return topo.dado;
     }
 
-    // Insere um novo elemento no topo
     public void empilha(T dado) {
         No<T> novoNo = new No<>(dado);
         novoNo.prox = topo;
@@ -31,7 +29,6 @@ class Pilha<T> {
         tamanho++;
     }
 
-    // Remove e retorna o elemento do topo
     public T desempilha() {
         if (topo == null) return null;
         T dado = topo.dado;
@@ -40,8 +37,8 @@ class Pilha<T> {
         return dado;
     }
 
-    // Retorna o tamanho da pilha
     public int getTamanho() {
         return tamanho;
     }
 }
+
