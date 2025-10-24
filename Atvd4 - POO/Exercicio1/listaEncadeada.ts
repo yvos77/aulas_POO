@@ -1,6 +1,5 @@
 export {};
 
-// Definição do nó
 class No<T> {
     dado: T;
     prox: No<T> | null;
@@ -11,7 +10,6 @@ class No<T> {
     }
 }
 
-// Lista encadeada simples
 class ListaEncadeadaSimples<T> {
     #inicio: No<T> | null;
     #length: number;
@@ -42,7 +40,6 @@ class ListaEncadeadaSimples<T> {
         let atual = this.#inicio;
         let proximo: No<T> | null = null;
 
-        // Inversão dos ponteiros
         while (atual !== null) {
             proximo = atual.prox;
             atual.prox = anterior;
@@ -50,10 +47,9 @@ class ListaEncadeadaSimples<T> {
             atual = proximo;
         }
 
-        this.#inicio = anterior; // o último vira o novo início
+        this.#inicio = anterior;
     }
 
-    // Mostra a lista no formato original
     mostrarOriginal() {
         let atual = this.#inicio;
         let texto = "";
@@ -65,7 +61,6 @@ class ListaEncadeadaSimples<T> {
         console.log(texto);
     }
 
-    // Mostra a lista invertida (formato visual do enunciado)
     mostrarInvertida() {
         let atual = this.#inicio;
         let texto = "null";
@@ -77,7 +72,6 @@ class ListaEncadeadaSimples<T> {
     }
 }
 
-// ====== Teste ======
 const lista = new ListaEncadeadaSimples<number>();
 lista.adicionar(1);
 lista.adicionar(2);
@@ -91,3 +85,4 @@ lista.inverter();
 
 console.log("Saída:");
 lista.mostrarInvertida();
+
