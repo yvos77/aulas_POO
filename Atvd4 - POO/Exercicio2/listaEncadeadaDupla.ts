@@ -93,3 +93,4 @@ lista.inverter();
 console.log("Saída:");
 lista.mostrar();
 
+ 
