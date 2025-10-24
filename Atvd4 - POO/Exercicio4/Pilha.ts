@@ -19,12 +19,10 @@ class Pilha<T> {
         this.#length = 0;
     }
 
-    // Retorna o valor do topo sem remover
     topo(): T | undefined {
         return this.#topo ? this.#topo.dado : undefined;
     }
 
-    // Insere um novo elemento no topo
     empilha(dado: T) {
         const novoNo = new No(dado);
         novoNo.prox = this.#topo;
@@ -32,7 +30,6 @@ class Pilha<T> {
         this.#length++;
     }
 
-    // Remove e retorna o elemento do topo
     desempilha(): T | undefined {
         if (!this.#topo) return undefined;
         const dado = this.#topo.dado;
@@ -41,19 +38,18 @@ class Pilha<T> {
         return dado;
     }
 
-    // Retorna o tamanho da pilha
     tamanho(): number {
         return this.#length;
     }
 }
 
-// --- Teste ---
 const pilha = new Pilha<number>();
 pilha.empilha(10);
 pilha.empilha(20);
 pilha.empilha(30);
 
-console.log("Topo da pilha:", pilha.topo()); // Esperado: 30
-console.log("Desempilhando:", pilha.desempilha()); // Esperado: 30
-console.log("Topo agora:", pilha.topo()); // Esperado: 20
-console.log("Tamanho da pilha:", pilha.tamanho()); // Esperado: 2
+console.log("Topo da pilha:", pilha.topo());
+console.log("Desempilhando:", pilha.desempilha());
+console.log("Topo agora:", pilha.topo());
+console.log("Tamanho da pilha:", pilha.tamanho());
+
