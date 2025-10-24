@@ -1,4 +1,3 @@
-// --- Teste ---
 public class Main {
     public static void main(String[] args) {
         Fila<Integer> fila = new Fila<>();
@@ -12,4 +11,5 @@ public class Main {
         fila.listar(); // Esperado: [20]->[30]->null
         System.out.println("Tamanho da fila: " + fila.getTamanho()); // Esperado: 2
     }
+
 }
