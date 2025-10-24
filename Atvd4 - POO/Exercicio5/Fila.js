@@ -27,15 +27,15 @@ class Fila {
         __classPrivateFieldSet(this, _Fila_fim, null, "f");
         __classPrivateFieldSet(this, _Fila_length, 0, "f");
     }
-    // Retorna o valor do início da fila sem remover
+
     topo() {
         return __classPrivateFieldGet(this, _Fila_inicio, "f") ? __classPrivateFieldGet(this, _Fila_inicio, "f").dado : undefined;
     }
-    // Insere novo elemento no fim da fila
+
     enfileira(dado) {
         var _a;
         const novoNo = new No(dado);
-        if (!__classPrivateFieldGet(this, _Fila_fim, "f")) { // fila vazia
+        if (!__classPrivateFieldGet(this, _Fila_fim, "f")) {
             __classPrivateFieldSet(this, _Fila_inicio, novoNo, "f");
             __classPrivateFieldSet(this, _Fila_fim, novoNo, "f");
         }
@@ -45,7 +45,7 @@ class Fila {
         }
         __classPrivateFieldSet(this, _Fila_length, (_a = __classPrivateFieldGet(this, _Fila_length, "f"), _a++, _a), "f");
     }
-    // Remove e retorna o elemento do início da fila
+
     desenfileira() {
         var _a;
         if (!__classPrivateFieldGet(this, _Fila_inicio, "f"))
@@ -53,16 +53,16 @@ class Fila {
         const dado = __classPrivateFieldGet(this, _Fila_inicio, "f").dado;
         __classPrivateFieldSet(this, _Fila_inicio, __classPrivateFieldGet(this, _Fila_inicio, "f").prox, "f");
         if (!__classPrivateFieldGet(this, _Fila_inicio, "f"))
-            __classPrivateFieldSet(this, _Fila_fim, null, "f"); // fila ficou vazia
-        __classPrivateFieldSet(this, _Fila_length, // fila ficou vazia
+            __classPrivateFieldSet(this, _Fila_fim, null, "f");
+        __classPrivateFieldSet(this, _Fila_length,
         (_a = __classPrivateFieldGet(this, _Fila_length, "f"), _a--, _a), "f");
         return dado;
     }
-    // Retorna o tamanho da fila
+
     tamanho() {
         return __classPrivateFieldGet(this, _Fila_length, "f");
     }
-    // Lista os elementos da fila
+
     listar() {
         let atual = __classPrivateFieldGet(this, _Fila_inicio, "f");
         let saida = '';
@@ -75,13 +75,13 @@ class Fila {
     }
 }
 _Fila_inicio = new WeakMap(), _Fila_fim = new WeakMap(), _Fila_length = new WeakMap();
-// --- Teste ---
+
 const fila = new Fila();
 fila.enfileira(10);
 fila.enfileira(20);
 fila.enfileira(30);
-console.log("Topo da fila:", fila.topo()); // Esperado: 10
-console.log("Desenfileirando:", fila.desenfileira()); // Esperado: 10
-console.log("Topo agora:", fila.topo()); // Esperado: 20
-fila.listar(); // Esperado: [20]->[30]->null
-console.log("Tamanho da fila:", fila.tamanho()); // Esperado: 2
+console.log("Topo da fila:", fila.topo());
+console.log("Desenfileirando:", fila.desenfileira());
+console.log("Topo agora:", fila.topo());
+fila.listar();
+console.log("Tamanho da fila:", fila.tamanho());
