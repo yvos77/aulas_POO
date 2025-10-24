@@ -42,7 +42,6 @@ class ListaEncadeadaDupla<T> {
         let atual = this.#inicio;
         let temp: No<T> | null = null;
 
-        // Inverte os ponteiros de todos os nós
         while (atual !== null) {
             temp = atual.ant;
             atual.ant = atual.prox;
@@ -50,7 +49,6 @@ class ListaEncadeadaDupla<T> {
             atual = atual.ant;
         }
 
-        // Troca início e fim
         temp = this.#inicio;
         this.#inicio = this.#fim;
         this.#fim = temp;
@@ -61,15 +59,15 @@ class ListaEncadeadaDupla<T> {
         let texto = "null";
 
         while (atual !== null) {
-            // início da lista → seta “<-”
+
             if (atual === this.#inicio) {
                 texto += `<-[${atual.dado}]`;
             }
-            // fim da lista → seta “->”
+
             else if (atual.prox === null) {
                 texto += `<->[${atual.dado}]->`;
             }
-            // meio da lista → seta “<->”
+
             else {
                 texto += `<->[${atual.dado}]`;
             }
@@ -81,7 +79,6 @@ class ListaEncadeadaDupla<T> {
     }
 }
 
-// ===== Teste =====
 const lista = new ListaEncadeadaDupla<number>();
 lista.adicionar(1);
 lista.adicionar(2);
@@ -95,3 +92,4 @@ lista.inverter();
 
 console.log("Saída:");
 lista.mostrar();
+
