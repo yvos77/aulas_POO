@@ -24,7 +24,6 @@ class ListaSimples {
         }
     }
 
-    // imprime com setas para a direita (forma original)
     public void exibirNormal() {
         No aux = inicio;
         System.out.print("Entrada: ");
@@ -35,7 +34,6 @@ class ListaSimples {
         System.out.println("null");
     }
 
-    // imprime com setas para a esquerda (forma invertida do PDF)
     public void exibirInvertido() {
         System.out.print("Saída: ");
         System.out.print("null ");
@@ -47,7 +45,6 @@ class ListaSimples {
         System.out.println();
     }
 
-    // método inverter() (mantém o mesmo funcionamento)
     public void inverter() {
         No anterior = null;
         No atual = inicio;
@@ -63,3 +60,4 @@ class ListaSimples {
         inicio = anterior;
     }
 }
+
