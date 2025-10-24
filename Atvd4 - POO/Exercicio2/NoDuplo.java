@@ -24,7 +24,6 @@ class ListaDupla {
         }
     }
 
-    // Impressão no estilo do PDF (entrada)
     public void exibir() {
         NoDuplo aux = inicio;
         System.out.print("Entrada: null");
@@ -34,21 +33,17 @@ class ListaDupla {
             return;
         }
 
-        // imprime o primeiro nó com "<-["valor"]"
         System.out.print("<-[" + aux.valor + "]");
         aux = aux.proximo;
 
-        // nós do meio: "<->[valor]"
         while (aux != null) {
             System.out.print("<->[" + aux.valor + "]");
             aux = aux.proximo;
         }
 
-        // final
         System.out.println("->null");
     }
 
-    // Impressão no estilo do PDF (saída) - percorre a lista a partir do inicio
     public void exibirInvertido() {
         NoDuplo aux = inicio;
         System.out.print("Saída: null");
@@ -69,7 +64,6 @@ class ListaDupla {
         System.out.println("->null");
     }
 
-    // inverter() já corrigido (não cria nós)
     public void inverter() {
         NoDuplo atual = inicio;
         NoDuplo temp = null;
@@ -88,3 +82,4 @@ class ListaDupla {
         }
     }
 }
+
