@@ -10,7 +10,7 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
     return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
 var _ListaEncadeadaSimples_inicio, _ListaEncadeadaSimples_length;
-// Definição do nó
+
 var No = /** @class */ (function () {
     function No(dado) {
         this.dado = dado;
@@ -18,7 +18,7 @@ var No = /** @class */ (function () {
     }
     return No;
 }());
-// Lista encadeada simples
+
 var ListaEncadeadaSimples = /** @class */ (function () {
     function ListaEncadeadaSimples() {
         _ListaEncadeadaSimples_inicio.set(this, void 0);
@@ -45,16 +45,16 @@ var ListaEncadeadaSimples = /** @class */ (function () {
         var anterior = null;
         var atual = __classPrivateFieldGet(this, _ListaEncadeadaSimples_inicio, "f");
         var proximo = null;
-        // Inversão dos ponteiros
+
         while (atual !== null) {
             proximo = atual.prox;
             atual.prox = anterior;
             anterior = atual;
             atual = proximo;
         }
-        __classPrivateFieldSet(this, _ListaEncadeadaSimples_inicio, anterior, "f"); // o último vira o novo início
+        __classPrivateFieldSet(this, _ListaEncadeadaSimples_inicio, anterior, "f");
     };
-    // Mostra a lista no formato original
+
     ListaEncadeadaSimples.prototype.mostrarOriginal = function () {
         var atual = __classPrivateFieldGet(this, _ListaEncadeadaSimples_inicio, "f");
         var texto = "";
@@ -65,7 +65,7 @@ var ListaEncadeadaSimples = /** @class */ (function () {
         texto += "null";
         console.log(texto);
     };
-    // Mostra a lista invertida (formato visual do enunciado)
+
     ListaEncadeadaSimples.prototype.mostrarInvertida = function () {
         var atual = __classPrivateFieldGet(this, _ListaEncadeadaSimples_inicio, "f");
         var texto = "null";
@@ -78,7 +78,7 @@ var ListaEncadeadaSimples = /** @class */ (function () {
     return ListaEncadeadaSimples;
 }());
 _ListaEncadeadaSimples_inicio = new WeakMap(), _ListaEncadeadaSimples_length = new WeakMap();
-// ====== Teste ======
+
 var lista = new ListaEncadeadaSimples();
 lista.adicionar(1);
 lista.adicionar(2);
