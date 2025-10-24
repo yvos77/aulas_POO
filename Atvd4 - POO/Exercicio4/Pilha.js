@@ -25,11 +25,11 @@ class Pilha {
         __classPrivateFieldSet(this, _Pilha_topo, null, "f");
         __classPrivateFieldSet(this, _Pilha_length, 0, "f");
     }
-    // Retorna o valor do topo sem remover
+    
     topo() {
         return __classPrivateFieldGet(this, _Pilha_topo, "f") ? __classPrivateFieldGet(this, _Pilha_topo, "f").dado : undefined;
     }
-    // Insere um novo elemento no topo
+
     empilha(dado) {
         var _a;
         const novoNo = new No(dado);
@@ -37,7 +37,7 @@ class Pilha {
         __classPrivateFieldSet(this, _Pilha_topo, novoNo, "f");
         __classPrivateFieldSet(this, _Pilha_length, (_a = __classPrivateFieldGet(this, _Pilha_length, "f"), _a++, _a), "f");
     }
-    // Remove e retorna o elemento do topo
+
     desempilha() {
         var _a;
         if (!__classPrivateFieldGet(this, _Pilha_topo, "f"))
@@ -47,18 +47,18 @@ class Pilha {
         __classPrivateFieldSet(this, _Pilha_length, (_a = __classPrivateFieldGet(this, _Pilha_length, "f"), _a--, _a), "f");
         return dado;
     }
-    // Retorna o tamanho da pilha
+
     tamanho() {
         return __classPrivateFieldGet(this, _Pilha_length, "f");
     }
 }
 _Pilha_topo = new WeakMap(), _Pilha_length = new WeakMap();
-// --- Teste ---
+
 const pilha = new Pilha();
 pilha.empilha(10);
 pilha.empilha(20);
 pilha.empilha(30);
-console.log("Topo da pilha:", pilha.topo()); // Esperado: 30
-console.log("Desempilhando:", pilha.desempilha()); // Esperado: 30
-console.log("Topo agora:", pilha.topo()); // Esperado: 20
-console.log("Tamanho da pilha:", pilha.tamanho()); // Esperado: 2
+console.log("Topo da pilha:", pilha.topo());
+console.log("Desempilhando:", pilha.desempilha());
+console.log("Topo agora:", pilha.topo());
+console.log("Tamanho da pilha:", pilha.tamanho());
