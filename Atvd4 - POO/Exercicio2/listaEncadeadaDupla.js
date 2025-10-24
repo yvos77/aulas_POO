@@ -45,14 +45,14 @@ class ListaEncadeadaDupla {
     inverter() {
         let atual = __classPrivateFieldGet(this, _ListaEncadeadaDupla_inicio, "f");
         let temp = null;
-        // Inverte os ponteiros de todos os nós
+
         while (atual !== null) {
             temp = atual.ant;
             atual.ant = atual.prox;
             atual.prox = temp;
             atual = atual.ant;
         }
-        // Troca início e fim
+
         temp = __classPrivateFieldGet(this, _ListaEncadeadaDupla_inicio, "f");
         __classPrivateFieldSet(this, _ListaEncadeadaDupla_inicio, __classPrivateFieldGet(this, _ListaEncadeadaDupla_fim, "f"), "f");
         __classPrivateFieldSet(this, _ListaEncadeadaDupla_fim, temp, "f");
@@ -61,15 +61,15 @@ class ListaEncadeadaDupla {
         let atual = __classPrivateFieldGet(this, _ListaEncadeadaDupla_inicio, "f");
         let texto = "null";
         while (atual !== null) {
-            // início da lista → seta “<-”
+
             if (atual === __classPrivateFieldGet(this, _ListaEncadeadaDupla_inicio, "f")) {
                 texto += `<-[${atual.dado}]`;
             }
-            // fim da lista → seta “->”
+
             else if (atual.prox === null) {
                 texto += `<->[${atual.dado}]->`;
             }
-            // meio da lista → seta “<->”
+
             else {
                 texto += `<->[${atual.dado}]`;
             }
@@ -80,7 +80,7 @@ class ListaEncadeadaDupla {
     }
 }
 _ListaEncadeadaDupla_inicio = new WeakMap(), _ListaEncadeadaDupla_fim = new WeakMap(), _ListaEncadeadaDupla_length = new WeakMap();
-// ===== Teste =====
+
 const lista = new ListaEncadeadaDupla();
 lista.adicionar(1);
 lista.adicionar(2);
